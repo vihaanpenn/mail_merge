@@ -1,0 +1,13 @@
+Subject: Following up - embedded/IoT at {company}
+
+Hi {first_name},
+
+Quick nudge on my note from last week - I know inboxes get busy.
+
+I'm still really keen on {company}'s work on {personalization}, and I'd love 20 minutes to hear where the team is headed. I'm an EE master's student at Penn (embedded systems / IoT), interning at Somo AI in the Bay Area through July, and I've shipped autonomous and IoT systems to real field deployments.
+
+Would any time in the next week or two work? Happy to come to you. Resume is attached again for convenience.
+
+Best,
+{my_name}
+{my_phone} - {my_links}

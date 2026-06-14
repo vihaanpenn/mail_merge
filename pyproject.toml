@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mailmerge-outreach"
+version = "1.0.0"
+description = "Database-backed 1:1 cold-outreach mailer with reply tracking and follow-ups."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Vihaan Ravishankar", email = "vihaan.ravishankar@gmail.com" }]
+license = { text = "MIT" }
+keywords = ["email", "outreach", "mail-merge", "job-search", "smtp", "imap"]
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# MX-record verification before sending (recommended).
+mx = ["dnspython>=2.4"]
+# Read contact lists straight from .xlsx instead of .csv.
+excel = ["pandas>=2.0", "openpyxl>=3.1"]
+# Test suite.
+dev = ["pytest>=7.0"]
+all = ["dnspython>=2.4", "pandas>=2.0", "openpyxl>=3.1", "pytest>=7.0"]
+
+[project.scripts]
+mailmerge = "mailmerge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mailmerge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

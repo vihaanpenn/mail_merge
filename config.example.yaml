@@ -1,0 +1,70 @@
+# =============================================================================
+# config.yaml  -  copy this to config.yaml and edit the values.
+#   cp config.example.yaml config.yaml      (or run: mailmerge init)
+#
+# Your email password is NEVER stored here. It is read at run time from an
+# environment variable (see auth.password_env / imap.password_env below).
+# =============================================================================
+
+sender:
+  name:  "Vihaan Ravishankar"            # exactly how you want the From name to read
+  email: "you@gmail.com"                 # the address you send from (and read replies on)
+  phone: "+1 (555) 555-5555"             # goes in your signature ({my_phone})
+  links: "linkedin.com/in/you - you.dev" # goes in your signature ({my_links})
+
+auth:
+  smtp_host: "smtp.gmail.com"            # Gmail. Outlook: smtp-mail.outlook.com
+  smtp_port: 587                         # 587 = STARTTLS (recommended)
+  password_env: "EMAIL_APP_PASSWORD"     # env var holding your app password
+
+imap:                                    # reading replies back (mailmerge sync)
+  enabled: true
+  host: "imap.gmail.com"                 # Gmail. Outlook: outlook.office365.com
+  port: 993
+  mailbox: "INBOX"
+  password_env: "EMAIL_APP_PASSWORD"     # usually the SAME Gmail app password
+  lookback_days: 30                      # only scan mail newer than this when syncing
+
+database:
+  path: "data/mailmerge.db"              # the SQLite database (your source of truth)
+
+contacts:
+  path: "data/contacts.csv"             # default sheet for `mailmerge import`
+  # Map these logical fields to the EXACT column headers in your spreadsheet.
+  # Any other columns are preserved verbatim and exposed to templates as {slug}.
+  columns:
+    company:         "Company Name"
+    name:            "Contact Name"
+    title:           "Contact Title"
+    email:           "Email"
+    confidence:      "Email Confidence"
+    personalization: "Personalization"   # the per-company hook ("...your work on ___")
+  # A contact is not eligible to send unless ALL of these render non-empty.
+  # This is what guarantees a half-filled template never goes out.
+  required_fields: ["first_name", "company", "personalization"]
+  # Skip contacts whose Email Confidence is below this (High > Medium > Low).
+  # Blank/unknown counts as below Medium and is skipped at "Medium".
+  min_confidence: "Medium"
+
+resume:
+  path: "resume/Vihaan_Resume.pdf"       # put your PDF here and update the name
+
+sending:
+  default_template: "warm"               # files in templates/ (warm, direct, ...)
+  campaign: "default"                    # label stored on each send
+  daily_cap: 40                          # max emails per run. Keep LOW for cold outreach.
+  delay_min_seconds: 35                  # randomized pause between sends
+  delay_max_seconds: 90
+  dry_run_output_dir: "output/preview"   # where `mailmerge preview` writes rendered emails
+
+followups:                               # multi-step cadence (mailmerge followup)
+  enabled: true
+  # Each step is sent only if the contact has NOT replied or bounced, and only
+  # once `wait_days` have elapsed since the most recent contact.
+  steps:
+    - { step: 1, template: "followup1", wait_days: 4 }
+    - { step: 2, template: "followup2", wait_days: 7 }
+
+verification:
+  check_format: true                     # always-on basic syntax check
+  check_mx: true                         # verify the domain can receive mail (pip install dnspython)

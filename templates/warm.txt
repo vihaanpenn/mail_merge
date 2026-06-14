@@ -1,0 +1,15 @@
+Subject: Embedded/IoT engineer (Penn MS) - would love to talk to {company}
+
+Hi {first_name},
+
+I build for the edge - firmware, sensors, and the networks that tie them together - and I've been hooked since the first time I got a bare-metal board to do something it wasn't supposed to.
+
+I'm Vihaan, an EE master's student at Penn focused on embedded systems and IoT, currently interning at Somo AI here in the Bay Area. Before Penn, I took autonomous and IoT systems from prototype to government pilot deployments at Cell Propulsion - so I've shipped hardware that has to work in the field, not just on the bench.
+
+{company}'s work on {personalization} is exactly where I want to be building full-time. I'm in Palo Alto through the end of July and would love 20 minutes in person to hear what you're working on and where the team is headed. My resume is attached for the details.
+
+Would any time in the next couple of weeks work?
+
+Best,
+{my_name}
+{my_phone} - {my_links}

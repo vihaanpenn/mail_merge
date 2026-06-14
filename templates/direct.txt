@@ -1,0 +1,15 @@
+Subject: Full-time embedded/IoT - Penn MS, in the Bay this summer
+
+Hi {first_name},
+
+I'm an embedded engineer at heart - I love making constrained hardware do reliable, useful work in the real world, and it's what I want to spend my career on.
+
+I'm Vihaan, an EE master's student at Penn focused on embedded systems and IoT, currently interning at Somo AI in the Bay Area. At Cell Propulsion I took autonomous and IoT infrastructure from lab prototype to government pilot deployments, so I've shipped systems that have to hold up in the field.
+
+I've been following {company}'s work on {personalization}, and it's exactly the kind of embedded/IoT challenge I want to take on full-time after I graduate. I'm in Palo Alto through the end of July - could I grab 20 minutes in person to learn about what you're building? My resume is attached.
+
+Would any time in the next couple of weeks work?
+
+Best,
+{my_name}
+{my_phone} - {my_links}

@@ -1,0 +1,13 @@
+Subject: Last note - {company}
+
+Hi {first_name},
+
+This is my last note - I don't want to clutter your inbox.
+
+If the timing isn't right, no worries at all. {company}'s work on {personalization} genuinely excites me, so if there's ever a fit for an embedded/IoT engineer down the line, I'd love to stay on your radar. My resume is attached if it's useful.
+
+Thanks for reading either way, and best of luck with what you're building.
+
+Best,
+{my_name}
+{my_phone} - {my_links}

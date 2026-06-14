@@ -1,0 +1,11 @@
+Put your resume PDF in this folder, e.g.:
+
+    resume/Vihaan_Resume.pdf
+
+Then set the matching path in config.yaml under:
+
+    resume:
+      path: "resume/Vihaan_Resume.pdf"
+
+It will be attached to every email. If the file is missing, the script warns
+you (and in send mode asks before sending anything without it).

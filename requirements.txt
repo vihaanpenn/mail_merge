@@ -1,0 +1,15 @@
+# Core (config parsing). Everything else in the standard library.
+PyYAML>=6.0
+
+# Recommended:
+#   dnspython -> MX checks (verify a domain can actually receive mail)
+dnspython>=2.4
+
+# Optional extras (install only if you need them):
+#   pandas + openpyxl -> import contacts straight from .xlsx
+#   pytest            -> run the test suite
+#
+#   pip install pandas openpyxl pytest
+#
+# Or install the package with extras:
+#   pip install -e ".[all]"

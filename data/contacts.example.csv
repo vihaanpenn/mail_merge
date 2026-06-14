@@ -1,0 +1,9 @@
+Company Name,Location,Region,Bay Area?,Stage/Size,Industry/Focus,Email,Email Confidence,Contact Name,Contact Title,Personalization
+Example Drone Co,South San Francisco CA,Bay Area,Yes,Late-stage,Drone delivery,ada@example.com,High,Ada Lovelace,VP Engineering,your autonomous delivery flight-control stack
+Example IoT Co,San Francisco CA,Bay Area,Yes,Series A,Industrial IoT,grace@example.com,High,Grace Hopper,Co-Founder & CTO,your cellular sensor platform and OTA pipeline
+Example Robotics Co,Mountain View CA,Bay Area,Yes,Series B,Warehouse robotics,alan@example.com,Medium,Alan Turing,Head of Hardware,your manipulation robots running on Jetson
+Example Edge AI Co,San Jose CA,Bay Area,Yes,Series C,Edge AI silicon,katherine@example.com,High,Katherine Johnson,Founder & CEO,your low-power MLSoC for robotics and defense
+Example Low Conf Co,Berkeley CA,Bay Area,Yes,Seed,Sensors,info@example.com,Low,,Founder,
+Example No Personalization Co,Palo Alto CA,Bay Area,Yes,Series A,Autonomy,nikola@example.com,High,Nikola Tesla,VP Engineering,
+Example SoCal Co,Los Angeles CA,SoCal,No,Series B,Marine robotics,hedy@example.com,Medium,Hedy Lamarr,Director of Engineering,your underwater robotics components
+Example Duplicate Co,Sunnyvale CA,Bay Area,Yes,Series A,Robotics,grace@example.com,High,Grace Hopper (dup),CTO,this row shares an email and should be deduped
