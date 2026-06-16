@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 import datetime as dt
 import re
 
@@ -87,8 +88,11 @@ def deep_merge(base: dict, override: dict | None) -> dict:
     A ``None`` override for a key whose default is a dict is ignored, so an empty
     YAML section (e.g. ``sending:`` with nothing under it, which parses to None)
     keeps the built-in defaults instead of wiping the whole section.
+
+    The result shares no mutable state with ``base`` (deep-copied), so mutating a
+    loaded config can never corrupt the module-level defaults.
     """
-    out = dict(base)
+    out = copy.deepcopy(base)
     for key, value in (override or {}).items():
         if isinstance(out.get(key), dict):
             if value is None:
@@ -96,7 +100,7 @@ def deep_merge(base: dict, override: dict | None) -> dict:
             if isinstance(value, dict):
                 out[key] = deep_merge(out[key], value)
                 continue
-        out[key] = value
+        out[key] = copy.deepcopy(value)
     return out
 
 

@@ -287,9 +287,12 @@ pip install -e ".[dev]"
 pytest -q
 ```
 
-The suite covers rendering, the database upsert/lifecycle, contact import &
-dedupe, the eligibility pipeline, follow-up due logic, and reply
-classification/matching — all offline (no network, no real mail).
+A ~280-case suite, all offline (no network, no real mail) using fixtures with
+dummy data and in-memory SMTP/IMAP fakes. It covers utilities, config loading,
+the database upsert/lifecycle, contact import & dedupe, template rendering, the
+eligibility pipeline, follow-up cadence, reply classification/matching, the full
+IMAP sync, SMTP sending (cap accounting, header sanitization), reporting, and
+the end-to-end CLI for every subcommand.
 
 ---
 
