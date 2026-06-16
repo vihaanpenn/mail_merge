@@ -13,6 +13,16 @@ database you can keep importing into and adjusting over time.
 
 ---
 
+## Documentation
+
+- **[QUICKSTART.md](QUICKSTART.md)** — get running in a few minutes.
+- **[docs/HANDBOOK.md](docs/HANDBOOK.md)** — the complete, in-depth manual:
+  architecture, every module, the full database schema, the sending/sync/
+  follow-up engines, the research methodology, the outreach playbook,
+  deliverability, security, testing, and troubleshooting.
+
+---
+
 ## Why it exists
 
 The first version was a single script that read a CSV and sent emails. This is
